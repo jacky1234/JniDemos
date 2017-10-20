@@ -1,14 +1,11 @@
 #include <jni.h>
 #include <string>
 #include <stdlib.h>
+#include "native-lib.h"
 #include <android/log.h>
-
-#define LOG_TAG "来自jni:"
-#define LOGE(...)  __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
 
 const char *MESSAGE = "hello from jni";
 
-extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_jack_jnidemo_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz,
                                                  jstring str) {
@@ -46,7 +43,6 @@ void callJavaMethod(JNIEnv *env, jobject thiz) {
     env->CallStaticVoidMethod(clazz, id, msg);
 }
 
-extern "C"  //没有这句话是找不到方法的
 void Java_com_jack_jnidemo_MainActivity_callJNIConvertJavaMethod(JNIEnv *env, jobject thiz) {
     LOGE("Java_com_jack_jnidemo_MainActivity_callJNIConvertJavaMethod");
     callJavaMethod(env, thiz);
