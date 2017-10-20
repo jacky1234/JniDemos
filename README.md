@@ -14,7 +14,8 @@
 - [CMake编译](http://www.jianshu.com/p/6332418b12b1)
 - [Android 官网对cmake的描述](https://developer.android.com/ndk/guides/cmake.html)
 
-例子位于module：cmake-type
+例子位于module：cmake-type:
+- 调用jni，通过反射调用java代码。
 
 
 
