@@ -1,4 +1,5 @@
-##NDk
+## 关于Android调用C和C++笔记
+
 ### Link
 - Android NDK 官网的[使用现有库](https://developer.android.com/ndk/guides/libs.html)的文档中还是使用  ndk-build + Android.mk + Application.mk 组合的说明文档。（其实官方文档中大部分都是的，并没有使用 CMake）
 - 很实用的介绍[Android 官网，向您的项目中添加c和c++代码](https://developer.android.com/studio/projects/add-native-code.html?hl=zh-cn)
@@ -33,6 +34,7 @@ NDK_PROJECT_PATH=null ，查询资料说 NDK一定要r9+版本的。实际我用
 
 #### 常见的问题
 **1. 遇到的坑**
+
 测试手机为华为mate8，cpu abi类型为 arm64-v8a,armeabi-v7a
 a种方式，为何在 Appliaciton.mk 非要 APP_ABI 加上arm64-v8a，才能跑起应用(否则报 unsatisfied link
  error)，但是其他方式都不需要，好奇怪。
