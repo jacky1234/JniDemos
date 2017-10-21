@@ -1,1 +1,1 @@
-include ':cmake-type'
+include ':cmake-type', ':mk-type', ':mk-gradle-type'
