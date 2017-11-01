@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/cmake-type" />
+            <option value="$PROJECT_DIR$/mk-gradle-type" />
+            <option value="$PROJECT_DIR$/mk-type" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

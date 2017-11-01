@@ -6,8 +6,7 @@
 
 const char *MESSAGE = "hello from jni";
 
-JNIEXPORT jstring JNICALL
-Java_com_jack_jnidemo_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz,
+jstring Java_com_jack_jnidemo_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz,
                                                  jstring str) {
     const char *question = env->GetStringUTFChars(str, JNI_FALSE);
     const char *answer = "fuck,no why!!!";
