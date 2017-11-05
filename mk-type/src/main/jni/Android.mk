@@ -9,7 +9,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := hi_jni
 
 # LOCAL_SRC_FILES :要编译的源文件，多个文件以空格分开即可。当导入 .a 或者 .so 文件的时候一个模块只能添加一个文件，后面将演示。
-LOCAL_SRC_FILES := hi_jni.cpp
+# 这边一定要加 ./ 不然会报 'the file is not the part of project'
+LOCAL_SRC_FILES := ./hi_jni.cpp
+# 头文件拼接
 LOCAL_C_INCLUDES += $(LOCAL_PATH)
 
 # LOCAL_LDLIBS :这里是添加一个本地依赖库，比如可以添加一个 log 库，当然我没用到就注释了。

@@ -43,3 +43,6 @@ a种方式，为何在 Appliaciton.mk 非要 APP_ABI 加上arm64-v8a，才能跑
 
 为何要使用extern"C",
 原因很简单，在 C++ 中函数在编译的时候会拼接上参数，这也是 c++ 中函数重载的处理机制，比如一个 set(int a) 和一个 set(int a,int b) ，在编译的时候就变成了 set_int 与 set_int_int ，我们加上extern ”C“ 就表示大爷想按照C来编译，所以函数名字后面就不会拼接上参数类型了。
+
+**3. the file is not the part of project**
+see the mk-type module's LOCAL_SRC_FILES define

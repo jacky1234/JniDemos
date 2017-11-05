@@ -12,15 +12,28 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            ndkBuild {
+                arguments "NDK_APPLICATION_MK:=src/main/jni/Application.mk", "APP_PLATFORM:=android-15"
+                abiFilters "armeabi-v7a", "x86"
+            }
+        }
     }
 
-    sourceSets.main.jniLibs.srcDirs = ['src/main/libs']
 
+    sourceSets.main.jniLibs.srcDirs = ['src/main/jni']
 //    sourceSets {
 //        main {
 //            jniLibs.srcDirs = ['src/main/libs']
 //        }
 //    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path "src/main/jni/Android.mk"
+        }
+    }
 
     buildTypes {
         release {
