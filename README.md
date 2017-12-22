@@ -22,6 +22,8 @@
 NDK_PROJECT_PATH=null ，查询资料说 NDK一定要r9+版本的。实际我用r10e版本也是可行的，可能高版本是无法通过的。
 但是尴尬的是 CMake 提示需要 Please use NDK r12+.
 
+NDK_PROJECT_PATH=null,错误解决此问题的方法是，一点点加入Android.mk的配置，查处问题出现的原因。
+
 #### b. 配置gradle来编译
 这种方式比上一中又简化了很多，无需再自己编写 Android.mk 了，但原理都是一样的
 
